@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, arial, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+}
+
+.container {
+    width: 999px;
+    height: 80vh;
+    margin: 50px auto;
+    display: grid;
+    justify-content: space-around;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.section-1 {
+    display: grid;
+    justify-content: center;
+    height: 100%;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+h1.facebook {
+    font-weight: bold;
+    margin-top: 100px;
+    font-size: 60px;
+    letter-spacing: -3px;
+    color: rgb(24, 119, 242);
+
+}
+
+p.desc {
+    margin-top: -50px;
+    font-size: 27px;
+    color: #1c1e21;
+    line-height: 36px;
+}
+
+section.section-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+section.section-2 form {
+    width: 400px;
+    height: 348px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 0px 9px 0px rgba(0, 0, 0, 0.32);
+    -webkit-box-shadow: 1px 0px 9px 0px rgba(0, 0, 0, 0.32);
+    -moz-box-shadow: 1px 0px 9px 0px rgba(0, 0, 0, 0.32);
+}
+
+input.autent,
+button.autent {
+    border: 1px solid #f0f2f5;
+    border-top: 2px solid #f0f2f5;
+    height: 52px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+input.autent {
+    padding-left: 15px;
+}
+
+button.autent {
+    background-color: rgb(24, 119, 242);
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+}
+
+input.autent::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    font-size: 17px;
+    color: hsl(210, 1%, 70%);
+    font-weight: 400;
+}
+
+input.autent:focus {
+    outline-color: rgba(24, 119, 242, .5);
+    outline-width: -1px;
+    font-size: 17px
+}
+
+/* lupa kata sandi */
+a.lupaks {
+    margin: 20px auto 0;
+    /* display: inline-block; */
+    font-size: 14px;
+    text-decoration: none;
+}
+
+span.line {
+    width: 350px;
+    border: 1px solid rgba(217, 238, 225, 1);
+    margin: auto;
+}
+
+a.buatAkunBaru {
+    margin: 10px auto 0;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    border-radius: 5px;
+    height: 50px;
+    background-color: rgb(66, 183, 42);
+    color: #fff;
+    font-size: 17px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* akhir form */
+p.pBuatHalaman {
+    margin: 30px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+a.buatHalaman {
+    font-weight: 600;
+    text-decoration: none;
+    color: #000;
+}

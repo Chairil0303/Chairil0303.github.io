@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(5, 138, 207);
+    background: linear-gradient(0deg, rgba(5, 138, 207, 0.4319852941176471) 0%, rgba(247, 247, 247, 0.3115371148459384) 30%);
+}
+
+@media only screen and (min-width: 768px) {
+
+    /* For desktop: */
+    .main-container {
+        margin: 50px 100px 0 100px;
+    }
+}
+
+.main-container {
+    background: rgb(5, 138, 207);
+    background: linear-gradient(180deg, rgba(5, 138, 207, 0.4319852941176471) 0%, rgba(247, 247, 247, 0.3115371148459384) 30%);
+
+    box-shadow: -3px -1px 17px -1px rgba(0, 0, 0, 0.53);
+    -webkit-box-shadow: -3px -1px 17px -1px rgba(0, 0, 0, 0.53);
+    -moz-box-shadow: -3px -1px 17px -1px rgba(0, 0, 0, 0.53);
+
+    border-radius: 20px;
+}
+
+
+section.main {
+    height: 100vh;
+}
+
+.desc {
+    padding-top: 100px;
+}
+
+
+section.projects {
+    padding: 10px;
+}

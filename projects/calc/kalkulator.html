@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Sederhana</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="kalkulator/style.css"> <!-- Optional: Keep if you have custom styles -->
+</head>
+<body class="flex items-center justify-center min-h-screen bg-gray-200">
+    <div class="bg-blue-400 p-4 rounded-lg shadow-lg w-96">
+        <h2 class="text-center text-white font-bold mb-4">Kalkulator Sederhana</h2>
+        <div class="bg-gray-200 rounded-t-lg p-2 mb-2 text-right text-gray-800 font-mono text-xl">
+            <input type="text" id="display" class="bg-transparent w-full text-right" disabled>
+        </div>
+        <div class="grid grid-cols-4 gap-2 buttons">
+            <button class="bg-yellow-300 text-gray-800 font-bold py-4 rounded btn" data-value="C">C</button>
+            <button class="bg-yellow-300 text-gray-800 font-bold py-4 rounded btn" data-value="CE">Ce</button>
+            <button class="bg-green-300 text-gray-800 font-bold py-4 rounded btn" data-value="+">+</button>
+            <button class="bg-green-300 text-gray-800 font-bold py-4 rounded btn" data-value="-">-</button>
+            <button class="bg-green-300 text-gray-800 font-bold py-4 rounded btn" data-value="7">7</button>
+            <button class="bg-green-300 text-gray-800 font-bold py-4 rounded btn" data-value="8">8</button>
+            <button class="bg-green-300 text-gray-800 font-bold py-4 rounded btn" data-value="9">9</button>
+            <button class="bg-green-300 text-gray-800 font-bold py-4 rounded btn" data-value="/">÷</button>
+            <button class="bg-green-300 text-gray-800 font-bold py-4 rounded btn" data-value="4">4</button>
+            <button class="bg-green-300 text-gray-800 font-bold py-4 rounded btn" data-value="5">5</button>
+            <button class="bg-green-300 text-gray-800 font-bold py-4 rounded btn" data-value="6">6</button>
+            <button class="bg-green-300 text-gray-800 font-bold py-4 rounded btn" data-value="*">×</button>
+            <button class="bg-green-300 text-gray-800 font-bold py-4 rounded btn" data-value="1">1</button>
+            <button class="bg-green-300 text-gray-800 font-bold py-4 rounded btn" data-value="2">2</button>
+            <button class="bg-green-300 text-gray-800 font-bold py-4 rounded btn" data-value="3">3</button>
+            <button class="bg-red-400 text-gray-800 font-bold py-4 rounded btn" data-value="=">=</button>
+            <button class="col-span-2 bg-green-300 text-gray-800 font-bold py-4 rounded btn" data-value="0">0</button>
+            <button class="bg-green-300 text-gray-800 font-bold py-4 rounded btn" data-value=".">.</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
