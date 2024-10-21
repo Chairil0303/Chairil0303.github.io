@@ -1,0 +1,173 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistik Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+    <div class="flex flex-col md:flex-row">
+        <!-- Sidebar -->
+        <div class="w-full md:w-64 bg-teal-500 h-auto md:h-screen p-4">
+            <div class="text-white text-2xl font-bold mb-6">Simple Admin</div>
+            <ul>
+                <li class="mb-4">
+                    <a href="#" class="flex items-center text-white">
+                        <i class="fas fa-tachometer-alt mr-3"></i> Dashboard
+                    </a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="flex items-center text-white">
+                        <i class="fas fa-layer-group mr-3"></i> UI Components
+                        <span class="ml-2 bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded-full">New</span>
+                    </a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="flex items-center text-white">
+                        <i class="fas fa-circle-notch mr-3"></i> Buttons
+                    </a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="flex items-center text-white">
+                        <i class="fas fa-chart-bar mr-3"></i> Chart
+                    </a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="flex items-center text-white">
+                        <i class="fas fa-keyboard mr-3"></i> Input
+                    </a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="flex items-center text-white">
+                        <i class="fas fa-window-maximize mr-3"></i> Modal
+                    </a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="flex items-center text-white">
+                        <i class="fas fa-th mr-3"></i> Widget
+                    </a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="flex items-center text-white">
+                        <i class="fas fa-pen mr-3"></i> Form
+                    </a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="flex items-center text-white">
+                        <i class="fas fa-table mr-3"></i> Data Table
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- Main Content -->
+        <div class="flex-1 p-6">
+            <h1 class="text-3xl font-bold mb-4">Dashboard</h1>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                <div class="bg-green-100 p-4 rounded-lg flex items-center">
+                    <div class="text-3xl font-bold mr-4">153</div>
+                    <div>
+                        <div class="text-lg">Posts</div>
+                        <i class="fas fa-file-alt text-green-500"></i>
+                    </div>
+                </div>
+                <div class="bg-yellow-100 p-4 rounded-lg flex items-center">
+                    <div class="text-3xl font-bold mr-4">20</div>
+                    <div>
+                        <div class="text-lg">Comments</div>
+                        <i class="fas fa-comments text-yellow-500"></i>
+                    </div>
+                </div>
+                <div class="bg-gray-100 p-4 rounded-lg flex items-center">
+                    <div class="text-3xl font-bold mr-4">20</div>
+                    <div>
+                        <div class="text-lg">Shared</div>
+                        <i class="fas fa-share-alt text-gray-500"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <h2 class="text-xl font-semibold text-teal-600">Post Statistics</h2>
+                    <canvas id="postChart"></canvas>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <h2 class="text-xl font-semibold text-teal-600">Todo List</h2>
+                    <form id="todoForm" class="mb-4">
+                        <input type="text" id="todoInput" class="border p-2 rounded w-full"
+                            placeholder="Add a new task">
+                        <button type="submit" class="bg-teal-500 text-white px-4 py-2 rounded mt-2">Add</button>
+                    </form>
+                    <ul id="todoList" class="list-disc pl-5">
+                        <!-- Todo items will be added here -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const ctx = document.getElementById('postChart').getContext('2d');
+        const postChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+                datasets: [
+                    {
+                        label: 'Posts',
+                        data: [12, 19, 3, 5, 2, 3, 10, 15, 8, 12],
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        fill: true,
+                    },
+                    {
+                        label: 'Comments',
+                        data: [2, 3, 20, 5, 1, 4, 8, 10, 6, 9],
+                        borderColor: 'rgba(255, 206, 86, 1)',
+                        backgroundColor: 'rgba(255, 206, 86, 0.2)',
+                        fill: true,
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    x: {
+                        beginAtZero: true
+                    },
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        document.getElementById('todoForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const todoInput = document.getElementById('todoInput');
+            const todoText = todoInput.value.trim();
+            if (todoText !== '') {
+                const todoList = document.getElementById('todoList');
+                const listItem = document.createElement('li');
+                listItem.className = 'flex items-center mb-2';
+                listItem.innerHTML = `
+                    <input type="checkbox" class="mr-2">
+                    <span>${todoText}</span>
+                `;
+                todoList.appendChild(listItem);
+                todoInput.value = '';
+            }
+        });
+
+        document.getElementById('todoList').addEventListener('change', function (event) {
+            if (event.target.tagName === 'INPUT' && event.target.type === 'checkbox') {
+                const listItem = event.target.parentElement;
+                listItem.remove();
+            }
+        });
+    </script>
+</body>
+
+</html>
