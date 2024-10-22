@@ -29,8 +29,26 @@ body {
 }
 
 
+
+
 section.main {
     height: 100vh;
+}
+
+.simson,
+.card {
+    transition: .5s;
+}
+
+.simson:hover,
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card:hover {
+    box-shadow: 1px 1px 17px 0px rgba(0, 0, 0, 0.44);
+    -webkit-box-shadow: 1px 1px 17px 0px rgba(0, 0, 0, 0.44);
+    -moz-box-shadow: 1px 1px 17px 0px rgba(0, 0, 0, 0.44);
 }
 
 .desc {
@@ -40,4 +58,24 @@ section.main {
 
 section.projects {
     padding: 10px;
+    margin-top: 100px;
+}
+
+
+section#sertifikat {
+    height: 100vh;
+    margin-top: 100px;
+}
+
+section#sertifikat .card {
+    margin: 10px;
+}
+
+h1 {
+    text-shadow: -2px 0px 17px rgba(31, 128, 196, 0.33);
+    transition: .5s;
+}
+
+h1:hover {
+    transform: scale(1.02);
 }
