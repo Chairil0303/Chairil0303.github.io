@@ -35,6 +35,10 @@ section.main {
     height: 100vh;
 }
 
+.simson {
+    width: 50%;
+}
+
 .simson,
 .card {
     transition: .5s;
@@ -53,18 +57,21 @@ section.main {
 
 .desc {
     padding-top: 100px;
+    margin-bottom: 100px;
 }
 
 
 section.projects {
     padding: 10px;
-    margin-top: 100px;
+    margin-top: 30vh;
+    margin-bottom: 30vh;
 }
 
 
 section#sertifikat {
     height: 100vh;
-    margin-top: 100px;
+    /* margin-top: 100vh; */
+    padding-bottom: 20vh;
 }
 
 section#sertifikat .card {
@@ -78,4 +85,8 @@ h1 {
 
 h1:hover {
     transform: scale(1.02);
+}
+
+section#projek {
+    margin-top: 30vh;
 }
