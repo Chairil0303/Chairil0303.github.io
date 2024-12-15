@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ular</title>
+  <link rel="icon" type="image/x-icon" href="img/logo-snacky.png" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div id="front">
+      <div class="logo">
+        <div class="brand">
+          <img src="img/logo-snacky.png" alt="snacky logo" />
+          <h1>ULAR !</h1>
+        </div>
+      </div>
+      <div class="instruction">
+        <h2>Perhatian</h2>
+        <p>1. Masukan namamu dan Klik Mulai</p>
+        <p>2. Kontrol dengan tanda panah pada Keyboard </p>
+        <p>3. Selamat Menikmati</p>
+        <div class="form">
+          <input type="text" id="input" placeholder="Input your name" />
+          <button id="start" disabled>Mulai</button>
+        </div>
+      </div>
+    </div>
+    <div id="main">
+      <header>
+        <h2>Score: <span id="score">0</span></h2>
+        <div class="brand">
+          <img src="img/logo-snacky.png" alt="snacky logo" />
+          <h1>Ular !!!</h1>
+        </div>
+        <h2>Waktu: <span id="minute">00</span>:<span id="second">00</span></h2>
+      </header>
+      <canvas id="map" width="960" height="300"></canvas>
+    </div>
+  </div>
+  <div class="modal">
+    <div class="end">
+      <h2>Permainan Selesai</h2>
+      <p>Skor: <span id="end-score"></span></p>
+      <p>Skor Tertinggi: <span id="end-highscore"></span></p>
+      <button id="restart" onclick="window.location.reload()">Mulai Ulang</button>
+    </div>
+  </div>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
