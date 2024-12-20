@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan Penjualan 2023 & 2024</title>
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* Styling tambahan untuk tabel */
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            border: 1px solid #000;
+        }
+
+        th {
+            background-color: #b4c0b8;
+
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        /* Perbesar Grafik */
+        .chart-container {
+            width: 90%;
+            max-width: 1200px;
+            /* Maksimum ukuran lebar */
+            margin: 20px auto;
+        }
+
+        canvas {
+            width: 100% !important;
+            height: 500px !important;
+            /* Tinggi grafik diperbesar */
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Laporan Penjualan 2023 & 2024</h2>
+
+    <!-- Tabel Data -->
+    <table>
+        <thead>
+            <tr>
+                <th>Bulan</th>
+                <th>Januari</th>
+                <th>Februari</th>
+                <th>Maret</th>
+                <th>April</th>
+                <th>Mei</th>
+                <th>Juni</th>
+                <th>Juli</th>
+                <th>Agustus</th>
+                <th>September</th>
+                <th>Oktober</th>
+                <th>November</th>
+                <th>Desember</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>2023</th>
+                <td>4.500</td>
+                <td>6.135</td>
+                <td>7.100</td>
+                <td>5.841</td>
+                <td>5.036</td>
+                <td>4.547</td>
+                <td>3.467</td>
+                <td>3.970</td>
+                <td>6.313</td>
+                <td>3.595</td>
+                <td>9.207</td>
+                <td>6.000</td>
+            </tr>
+            <tr>
+                <th>2024</th>
+                <td>2.600</td>
+                <td>4.300</td>
+                <td>7.935</td>
+                <td>8.004</td>
+                <td>9.505</td>
+                <td>5.026</td>
+                <td>6.108</td>
+                <td>6.343</td>
+                <td>9.404</td>
+                <td>9.280</td>
+                <td>9.287</td>
+                <td>9.000</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Grafik Penjualan -->
+    <div class="chart-container">
+        <canvas id="salesChart"></canvas>
+    </div>
+
+    <script>
+        // Data Penjualan
+        const bulan = [
+            "Januari", "Februari", "Maret", "April", "Mei", "Juni",
+            "Juli", "Agustus", "September", "Oktober", "November", "Desember"
+        ];
+        const data2023 = [4500, 6135, 7100, 5841, 5036, 4547, 3467, 3970, 6313, 3595, 9207, 6000];
+        const data2024 = [2600, 4300, 7935, 8004, 9505, 5026, 6108, 6343, 9404, 9280, 9287, 9000];
+
+        // Konfigurasi Chart.js
+        const ctx = document.getElementById('salesChart').getContext('2d');
+        const salesChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: bulan,
+                datasets: [
+                    {
+                        label: 'Penjualan 2023',
+                        data: data2023,
+                        backgroundColor: 'background-color: #fc0909;',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'Penjualan 2024',
+                        data: data2024,
+                        backgroundColor: 'background-color: #dae412',
+                        borderColor: 'rgba(255, 99, 132, 1)',
+                        borderWidth: 1
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Grafik Penjualan per Bulan'
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Jumlah Penjualan'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Bulan'
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
