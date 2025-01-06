@@ -35,6 +35,9 @@
                         <li class="nav-item .nav-projects">
                             <a class="nav-link active" aria-current="page" href="#projek">My Projects</a>
                         </li>
+                        <li class="nav-item .nav-projects">
+                            <a class="nav-link active" aria-current="page" href="#contactMe">Contact Me</a>
+                        </li>
                     </ul>
                 </div>
 
@@ -145,6 +148,100 @@
                     </div>
                 </div>
             </div>
+
+            <!-- filter -->
+            <div class="row mt-5">
+                <div class="row text-left">
+                    <h2>Filter The Image</h2>
+                    <p>You Can classify the image by their category</p>
+                </div>
+                <div class="filter-container mb-3">
+                    <select id="categoryFilter" class="form-select">
+                        <option value="all">Semua</option>
+                        <option value="flowers">Flowers</option>
+                        <option value="city">City</option>
+                        <option value="animals">Animals</option>
+                    </select>
+                </div>
+            </div>
+            <!-- data -->
+            <div class="row">
+                <div class="col-md-3 items" data-category="flowers">
+                    <div class="card mb-3">
+                        <img src="gambar/1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">FLowers</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 items" data-category="flowers">
+                    <div class="card mb-3">
+                        <img src="gambar/2.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Flowers</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 items" data-category="flowers">
+                    <div class="card mb-3">
+                        <img src="gambar/3.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Flowers</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 items" data-category="animals">
+                    <div class="card mb-3">
+                        <img src="gambar/cats.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Cat</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 items" data-category="animals">
+                    <div class="card mb-3">
+                        <img src="gambar/dogs.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Dog</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 items" data-category="city">
+                    <div class="card mb-3">
+                        <img src="gambar/c1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">City</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 items" data-category="city">
+                    <div class="card mb-3">
+                        <img src="gambar/c2.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">City</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 items" data-category="city">
+                    <div class="card mb-3">
+                        <img src="gambar/c3.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">City</h5>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
         </section>
 
         <!-- sertifikat -->
@@ -242,6 +339,59 @@
             </div>
         </section>
 
+        <!-- Contact Section -->
+        <section id="contactMe" class="contact">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="container">
+                        <h2>Kontak Saya</h2>
+                        <form action="submit_form.php" method="POST">
+                            <input type="text" name="name" placeholder="Nama Anda" required />
+                            <input type="email" name="email" placeholder="Email Anda" required />
+                            <textarea name="message" placeholder="Catatan" required></textarea>
+                            <button type="submit" class="btn">Kirim</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <section id="Location" class="mb-8">
+                        <div class="flex justify-center items-center mt-8 mb-8">
+                            <h2 class="text-3xl font-bold text-gray-800">Lokasi</h2>
+                        </div>
+                        <div class="container">
+                            <div class="column is-12 regular-section" data-aos="fade-up" data-aos-easing="linear">
+                                <p class="text-center">
+                                    <strong>Parakan Jati</strong>
+                                    <br>
+                                    Bojong Gede, Kabupaten Bogor
+                                    <br>
+                                </p>
+                            </div>
+                            <div class="section-map" data-aos="fade-up" data-aos-easing="linear">
+
+
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d8659.567456797997!2d106.7929885743083!3d-6.479567823489114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sid!2sid!4v1736136113901!5m2!1sid!2sid"
+                                    width="400" style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+                            </div>
+                            <div class="space40px"></div>
+                            <div class="has-text-centered" data-aos="fade-up" data-aos-easing="linear">
+                                <a href="https://maps.app.goo.gl/DmDqjmoXXCqZxhgT6" class="button btn-cta "
+                                    target="_blank" data-aos="zoom-in">
+                                    <i class="fa-solid fa-route mr-2"></i>
+                                    &nbsp;&nbsp;Go To Google Maps
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+        </section>
+
 
         <!-- footer -->
         <div class="row text-center mt-5 mb-5">
@@ -259,6 +409,25 @@
         function openFile(filename) {
             window.open(filename, 'projects/');
         }
+
+
+        //filter gambar 
+        const filterDropdown = document.getElementById('categoryFilter');
+        const galleryItems = document.querySelectorAll('.items');
+
+        filterDropdown.addEventListener('change', function () {
+            const selectedCategory = this.value;
+
+            galleryItems.forEach(item => {
+                const itemCategory = item.getAttribute('data-category');
+
+                if (selectedCategory === 'all' || itemCategory === selectedCategory) {
+                    item.style.display = 'block'; // Tampilkan elemen yang sesuai
+                } else {
+                    item.style.display = 'none'; // Sembunyikan elemen yang tidak sesuai
+                }
+            });
+        });
     </script>
 </body>
 
