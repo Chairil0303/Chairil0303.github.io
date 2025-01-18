@@ -11,6 +11,7 @@
 
     <!-- AOS Animate On Scroll -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <!-- AOS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
     <style>
@@ -110,14 +111,14 @@
         </section>
 
         <!-- tugas -->
-        <section class="projects" id="projects" data-aos="fade-in">
-            <div class="row text-center">
+        <section class="projects" id="projects">
+            <div class="row text-center" data-aos="fade-up" data-aos-duration="1000">
                 <h1>Tugas Pemprograman Web 1</h1>
                 <p>In this fifth semester I teach web programming courses </p>
                 <p>Here's my tasks</p>
             </div>
 
-            <div class="row ">
+            <div class="row" data-aos="fade-up" data-aos-duration="1500">
                 <!-- calculator -->
                 <div class="col-md-2">
                     <div class="card mb-3">
@@ -188,7 +189,7 @@
 
             <!-- filter -->
             <div class="row mt-5">
-                <div class="row text-left">
+                <div class="row text-left" data-aos="fade-right" data-aos-duration="1000">
                     <h2>Filter The Image</h2>
                     <p>You Can classify the image by their category</p>
                 </div>
@@ -202,7 +203,7 @@
                 </div>
             </div>
             <!-- data -->
-            <div class="row">
+            <div class="row" data-aos="fade-right" data-aos-duration="1500">
                 <div class="col-md-3 items" data-category="flowers">
                     <div class="card mb-3">
                         <img src="gambar/1.jpg" class="card-img-top" alt="...">
@@ -283,12 +284,12 @@
 
         <!-- sertifikat -->
         <section id="sertifikat mb-5">
-            <div class="row text-center">
+            <div class="row text-center" data-aos="fade-up" data-aos-duration="1000">
                 <h1>Sertificates</h1>
                 <p>before the middle of this semester I got some certificates</p>
             </div>
 
-            <div class="row">
+            <div class="row" data-aos="fade-right" data-aos-duration="1500">
                 <!-- html -->
                 <div class="col-md-4">
                     <div class="card mb-3">
@@ -344,13 +345,13 @@
 
         <!-- project -->
         <section id="projek">
-            <div class="row text-center mb-5">
+            <div class="row text-center mb-5" data-aos="fade-up" data-aos-duration="1000">
                 <h1>My Projects</h1>
                 <p>in my life at my 21 years old, I've built some projects </p>
                 <p>Here's for examples below </p>
             </div>
 
-            <div class="row">
+            <div class="row" data-aos="fade-up" data-aos-duration="1500">
                 <!-- Movie -->
                 <div class="col-md-4">
                     <div class="card mb-3">
@@ -391,7 +392,7 @@
         <!-- Contact Section -->
         <section id="contactMe" class="contact">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6" data-aos="fade-right" data-aos-duration="1000">
                     <div class="container">
                         <h2>Kontak Saya</h2>
                         <form action="submit_form.php" method="POST">
@@ -402,7 +403,7 @@
                         </form>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6" data-aos="fade-left" data-aos-duration="1000">
                     <section id="Location" class="mb-8">
                         <div class="flex justify-center items-center mt-8 mb-8">
                             <h2 class="text-3xl font-bold text-gray-800">Lokasi</h2>
@@ -483,6 +484,8 @@
         AOS.init();
 
     </script>
+
+
 </body>
 
 </html>
