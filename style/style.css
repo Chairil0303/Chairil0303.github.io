@@ -19,6 +19,23 @@ body {
     }
 }
 
+@media (max-width: 767px) {
+
+    /* Atau breakpoint mobile Anda */
+    body {
+        overflow-x: hidden;
+        /* Mencegah scroll horizontal */
+        max-width: 100%;
+        /* Lebar maksimum 100% dari container */
+        width: auto;
+        /* Biarkan lebar menyesuaikan */
+    }
+
+    .main-container {}
+
+}
+
+
 .main-container {
     background: rgb(255, 255, 255);
     /* background: linear-gradient(180deg, rgba(5, 138, 207, 0.4319852941176471) 0%, rgba(247, 247, 247, 0.3115371148459384) 30%); */
