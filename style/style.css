@@ -4,11 +4,18 @@
     box-sizing: border-box;
 }
 
+html,
 body {
-    background: rgb(255, 255, 255);
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(240, 61, 61);
     /* background: linear-gradient(0deg, rgba(5, 138, 207, 0.4319852941176471) 0%, rgba(247, 247, 247, 0.3115371148459384) 30%); */
     font-family: "Geist", serif;
     font-optical-sizing: auto;
+    /* text-align: center; */
 }
 
 @media only screen and (min-width: 768px) {
